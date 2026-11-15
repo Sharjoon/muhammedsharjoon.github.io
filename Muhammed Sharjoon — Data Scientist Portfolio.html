@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muhammed Sharjoon — Data Scientist</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#141414;--bg2:#1f1f1f;--red:#e50914;--txt:#fff;--mute:#b3b3b3;--green:#46d369;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;gap:28px;padding:calc(14px + env(safe-area-inset-top,0px)) 4% 14px;background:linear-gradient(#000c,#0000)}
+nav.solid{background:var(--bg)}
+.logo{font-family:"Bebas Neue",Impact,sans-serif;color:var(--red);font-size:30px;letter-spacing:1px;text-decoration:none}
+nav a.l{color:#e5e5e5;text-decoration:none;font-size:14px}
+nav a.l:hover{color:var(--mute)}
+nav .sp{flex:1}
+@media(max-width:700px){nav a.l{display:none}}
+.hero{min-height:88vh;display:flex;align-items:flex-end;padding:0 4% 9vh;background:radial-gradient(900px 500px at 80% 20%,#e5091433,#0000 60%),linear-gradient(120deg,#3a0a0e 0%,#1a1a2e 55%,#0d1b2a 100%);position:relative}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:160px;background:linear-gradient(#0000,var(--bg))}
+.hero>div{position:relative;z-index:1;max-width:640px}
+.tag{font-size:13px;color:var(--mute);margin:0 0 10px}
+h1{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:clamp(52px,10vw,104px);line-height:.95;margin:0 0 14px;letter-spacing:1px}
+.meta{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;font-size:15px;margin-bottom:14px}
+.open{color:var(--green);font-weight:700}
+.age{border:1px solid #888;padding:0 6px;font-size:13px;color:var(--mute)}
+.hero p.d{font-size:clamp(15px,2vw,19px);line-height:1.45;margin:0 0 22px;text-shadow:0 1px 6px #000a}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{border:0;border-radius:4px;padding:11px 26px;font-size:17px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.w{background:#fff;color:#000}.btn.w:hover{background:#ffffffbf}
+.btn.g{background:#6d6d6eb3;color:#fff}.btn.g:hover{background:#6d6d6e66}
+main{margin-top:-60px;position:relative;z-index:2;padding-bottom:40px}
+section{margin:0 0 34px}
+h2{font-size:clamp(17px,2.2vw,22px);margin:0 4% 10px;font-weight:700}
+.rowwrap{position:relative}
+.row{display:flex;gap:8px;overflow-x:auto;padding:8px 4% 28px;scroll-snap-type:x proximity;scrollbar-width:none}
+.row::-webkit-scrollbar{display:none}
+.arr{position:absolute;top:8px;bottom:28px;width:4%;border:0;background:#141414b3;color:#fff;font-size:30px;cursor:pointer;z-index:3;opacity:0;transition:opacity .2s}
+.rowwrap:hover .arr{opacity:1}
+.arr.r{right:0}.arr.lft{left:0}
+@media(hover:none){.arr{display:none}}
+.card{flex:0 0 clamp(230px,24vw,320px);aspect-ratio:16/9;border-radius:4px;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;cursor:pointer;position:relative;overflow:hidden;scroll-snap-align:start;border:0;color:#fff;text-align:left;font:inherit;transition:transform .25s,box-shadow .25s}
+.card:hover,.card:focus-visible{transform:scale(1.07);z-index:4;box-shadow:0 10px 30px #000c;outline:none}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(#0000 25%,#000d)}
+.card>*{position:relative}
+.card b{font-size:16px;line-height:1.2}
+.card small{color:#e0e0e0;font-size:12px;margin-top:5px}
+.card .n{position:absolute;top:10px;left:12px;font-family:"Bebas Neue",Impact,sans-serif;font-size:20px;color:var(--red);letter-spacing:1px}
+.skill{flex:0 0 clamp(230px,24vw,300px);background:var(--bg2);border-radius:4px;padding:16px;border-top:3px solid var(--red)}
+.skill b{display:block;margin-bottom:8px}
+.skill span{display:inline-block;background:#333;border-radius:3px;padding:3px 8px;margin:0 4px 5px 0;font-size:12px}
+.stat{flex:0 0 190px;background:var(--bg2);border-radius:4px;padding:18px;text-align:center}
+.stat strong{display:block;font-family:"Bebas Neue",Impact,sans-serif;font-size:52px;font-weight:400;color:var(--red);line-height:1}
+.stat span{font-size:13px;color:var(--mute)}
+footer{padding:30px 4% 50px;color:var(--mute);font-size:14px;text-align:center}
+footer a{color:var(--mute)}
+.modal{position:fixed;inset:0;z-index:50;background:#000b;display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:4vh 12px}
+.modal.on{display:flex}
+.sheet{background:var(--bg2);width:min(760px,100%);border-radius:8px;overflow:hidden;box-shadow:0 20px 60px #000}
+.sheet .top{height:230px;display:flex;align-items:flex-end;padding:20px 28px;position:relative}
+.sheet .top::before{content:"";position:absolute;inset:0;background:linear-gradient(#0000 30%,var(--bg2))}
+.sheet .top h3{position:relative;margin:0;font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:clamp(30px,6vw,46px);letter-spacing:1px}
+.x{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:0;background:#181818;color:#fff;font-size:20px;cursor:pointer;z-index:2}
+.body{padding:6px 28px 28px;font-size:15px;line-height:1.55}
+.body .stack{color:var(--mute);font-size:13px;margin-bottom:12px}
+.body ul{padding-left:20px;margin:0}.body li{margin-bottom:8px}
+:focus-visible{outline:2px solid #fff;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav id="nav"><a class="logo" href="#top">SHARJOON</a><a class="l" href="#genai">Projects</a><a class="l" href="#exp">Experience</a><a class="l" href="#skills">Skills</a><a class="l" href="#contact">Contact</a><span class="sp"></span><a class="btn w" style="padding:6px 16px;font-size:14px" href="mailto:muhamedsharjoon@gmail.com">Hire me</a></nav>
+
+<header class="hero" id="top"><div>
+<p class="tag">A portfolio original</p>
+<h1>Muhammed Sharjoon</h1>
+<div class="meta"><span class="open">Open to work</span><span>3+ years</span><span class="age">Data Scientist</span><span>Python · SQL · GenAI</span></div>
+<p class="d">I build machine learning models, RAG apps, and dashboards that turn messy data into decisions. Three years across media analytics, competitive intelligence, and healthcare data.</p>
+<div class="btns"><a class="btn w" href="#genai">▶ Watch projects</a><a class="btn g" href="#exp">ⓘ More info</a></div>
+</div></header>
+
+<main>
+<section><h2>By the numbers</h2><div class="row" style="padding-bottom:10px">
+<div class="stat"><strong>3+</strong><span>years of experience</span></div>
+<div class="stat"><strong>10,000+</strong><span>media records audited</span></div>
+<div class="stat"><strong>15+</strong><span>Power BI &amp; Tableau dashboards</span></div>
+<div class="stat"><strong>95%+</strong><span>data-flagging accuracy</span></div>
+<div class="stat"><strong>50%+</strong><span>client efficiency gain</span></div>
+<div class="stat"><strong>~30%</strong><span>fewer metadata errors</span></div>
+</div></section>
+<section id="genai"><h2>Generative AI &amp; Agents</h2><div class="rowwrap" id="r1"></div></section>
+<section id="ml"><h2>Machine Learning &amp; Computer Vision</h2><div class="rowwrap" id="r2"></div></section>
+<section id="bi"><h2>SQL &amp; Dashboards</h2><div class="rowwrap" id="r3"></div></section>
+<section id="exp"><h2>Continue watching: Cape Start Pvt Ltd (Dec 2022 – Mar 2026)</h2><div class="rowwrap" id="r4"></div></section>
+<section id="skills"><h2>Skills</h2><div class="rowwrap" id="r5"></div></section>
+<section><h2>Education &amp; certification</h2><div class="rowwrap" id="r6"></div></section>
+<section id="contact"><h2>Let’s talk</h2><div class="row" style="padding-bottom:10px"><div class="skill" style="flex-basis:min(420px,86vw)"><b>muhamedsharjoon@gmail.com</b><span>8220664073</span><span>Kanyakumari, Tamil Nadu, India</span><div style="margin-top:12px"><a class="btn w" href="mailto:muhamedsharjoon@gmail.com">Send an email</a></div></div></div></section>
+</main>
+<footer>© 2026 Muhammed Sharjoon · Built as a Netflix-style portfolio. Not affiliated with Netflix.</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="sheet"><div class="top" id="mtop"><button class="x" id="mx" aria-label="Close">✕</button><h3 id="mt"></h3></div><div class="body"><div class="stack" id="ms"></div><ul id="ml2"></ul></div></div></div>
+
+<script>
+var G=["linear-gradient(135deg,#7a0c14,#2b0a3d)","linear-gradient(135deg,#0b3d5c,#1a1a2e)","linear-gradient(135deg,#0d5c4a,#10243a)","linear-gradient(135deg,#5c3a0b,#2e1a1a)","linear-gradient(135deg,#3a2a7a,#0d1b2a)","linear-gradient(135deg,#7a1a4a,#1a1a2e)"];
+var P={
+r1:[
+{t:"Multi-Document RetrievalQA (RAG)",s:"LangChain · Groq · ChromaDB",b:["Built a retrieval-augmented generation pipeline that answers questions across multiple documents using chunking, embeddings, and vector indexing.","Used Groq LLM inference for low-latency responses.","Tuned chunk size and embedding strategy to improve retrieval relevance and cut end-to-end response time."]},
+{t:"AI Agent Framework",s:"LangChain v1 · Groq API",b:["Designed an autonomous agent with LangChain’s create_agent architecture for multi-step reasoning and tool use.","Implemented tool-calling and conversational memory to support multi-turn tasks.","Added error recovery so the agent can retry and continue after failed steps."]}],
+r2:[
+{t:"Salary Estimation Model",s:"KNN regression · Scikit-learn",b:["Built a K-Nearest Neighbors regression model to predict salaries from experience and role features.","Improved accuracy with feature scaling and grid-search hyperparameter tuning."]},
+{t:"Sentiment Analysis",s:"NLP · Text classification",b:["Built a text classification pipeline with tokenization, vectorization, and ML models to predict sentiment.","Benchmarked multiple classifiers on precision, recall, and F1-score to pick the best one."]},
+{t:"Image Classification",s:"CNN · Deep learning",b:["Developed a convolutional neural network for image classification.","Reduced overfitting and improved validation accuracy with dropout and data augmentation.","Tuned hyperparameters to raise accuracy."]},
+{t:"Broken Rice Grain Prediction",s:"Computer vision · OpenCV",b:["Applied OpenCV image processing to detect and quantify broken rice grains for quality control.","Used contour detection and thresholding to calculate grain-breakage percentage for reporting."]},
+{t:"EDA &amp; Preprocessing",s:"NumPy · Pandas · Matplotlib · Seaborn",b:["Cleaned, transformed, and visualized datasets to uncover trends.","Prepared the data for machine learning models."]}],
+r3:[
+{t:"Coffee Shop Sales Analysis",s:"PostgreSQL · pgAdmin4",b:["Wrote SQL queries to analyze sales trends, top products, and customer patterns.","Summarized top sellers and seasonal demand in a concise report to guide inventory and promotions."]},
+{t:"Sales Performance Dashboard",s:"Tableau",b:["Designed an interactive dashboard of sales KPIs, regional trends, and product performance.","Added drill-down filters so stakeholders can explore regional and product-level results on their own."]},
+{t:"Employee Analytics Dashboard",s:"Power BI · DAX",b:["Built a dashboard analyzing attrition, performance, and departmental metrics for HR.","Wrote DAX measures that surface the key attrition drivers for retention discussions."]}],
+r4:[
+{t:"Media Analytics &amp; Metadata Quality",s:"Client: Cision",b:["Audited 10,000+ media records and cut metadata inconsistencies by ~30% through gap analysis and quality checks.","Built data validation and pipeline QA processes that improved client-facing analytics.","Automated recurring metadata QA with Python to speed up deliverables.","Documented QA workflows and standardized them across the team."]},
+{t:"Competitive Intelligence &amp; Market Analysis",s:"Clients: UHG · LexisNexis",b:["Applied statistical analysis and predictive modeling to help stakeholders detect market shifts 2–3 weeks faster than manual reporting.","Modeled large market datasets with regression and classification, improving client operational efficiency by 50%+.","Delivered 15+ Power BI and Tableau dashboards for executive decisions.","Automated recurring reports with SQL and Python."]},
+{t:"Data Monitoring &amp; Reporting",s:"Global media &amp; sports clients",b:["Tracked live broadcast data streams in real time with 95%+ data-flagging accuracy.","Reduced response time on data-quality workflows through process optimization.","Worked with engineering and client teams to fix pipeline issues and limit reporting downtime during live events.","Reported SLA compliance in recurring performance reviews."]}],
+r5:[
+{t:"Machine Learning &amp; Statistics",k:["Regression","Classification","Clustering","KNN","Random Forest","XGBoost","Time series","Feature engineering","A/B testing","Hypothesis testing"]},
+{t:"Programming &amp; Querying",k:["Python","Pandas","NumPy","Scikit-learn","SciPy","Statsmodels","SQL","PostgreSQL","Excel","Bash"]},
+{t:"Deep Learning, NLP &amp; GenAI",k:["TensorFlow","PyTorch","CNN","Transformers","Hugging Face","LLMs","LangChain","LangGraph","RAG","ChromaDB","OpenCV","MCP"]},
+{t:"Visualization &amp; BI",k:["Power BI","Tableau","DAX","Matplotlib","Seaborn","Plotly","KPI reporting"]},
+{t:"Data &amp; Cloud",k:["Snowflake","BigQuery","AWS","Databricks","ETL","Data warehousing"]},
+{t:"MLOps &amp; Tools",k:["Docker","Kubernetes","FastAPI","REST API","CI/CD","MLflow","Git/GitHub","Jupyter","Linux"]}],
+r6:[
+{t:"Data Science Professional Certificate",s:"Novitech",b:["Statistical modeling, EDA, supervised and unsupervised machine learning."]},
+{t:"B.E. Mechanical Engineering",s:"Jeppiaar Engineering College · 2014–2018",b:["Bachelor of Engineering."]}]};
+var cur=0;
+function mk(id,items,skill){var w=document.getElementById(id);var row=document.createElement("div");row.className="row";
+items.forEach(function(it,i){var e;
+if(skill){e=document.createElement("div");e.className="skill";e.innerHTML="<b>"+it.t+"</b>"+it.k.map(function(x){return "<span>"+x+"</span>"}).join("");}
+else{e=document.createElement("button");e.className="card";e.style.background=G[(cur++)%G.length];e.innerHTML="<b>"+it.t+"</b><small>"+it.s+"</small>";e.onclick=function(){openM(it,e.style.background)};}
+row.appendChild(e)});
+w.appendChild(row);
+var l=document.createElement("button"),r=document.createElement("button");l.className="arr lft";r.className="arr r";l.textContent="‹";r.textContent="›";l.setAttribute("aria-label","Scroll left");r.setAttribute("aria-label","Scroll right");
+l.onclick=function(){row.scrollBy({left:-row.clientWidth*.8,behavior:"smooth"})};r.onclick=function(){row.scrollBy({left:row.clientWidth*.8,behavior:"smooth"})};
+w.appendChild(l);w.appendChild(r)}
+for(var k in P)mk(k,P[k],k==="r5");
+var M=document.getElementById("modal"),last;
+function openM(it,bg){last=document.activeElement;document.getElementById("mt").innerHTML=it.t;document.getElementById("ms").innerHTML=it.s;
+document.getElementById("ml2").innerHTML=it.b.map(function(x){return "<li>"+x+"</li>"}).join("");
+document.getElementById("mtop").style.background=bg;M.classList.add("on");document.getElementById("mx").focus()}
+function closeM(){M.classList.remove("on");if(last)last.focus()}
+document.getElementById("mx").onclick=closeM;
+M.addEventListener("click",function(e){if(e.target===M)closeM()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeM()});
+window.addEventListener("scroll",function(){document.getElementById("nav").classList.toggle("solid",scrollY>40)});
+</script>
+</body>
+</html>
